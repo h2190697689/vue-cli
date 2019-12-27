@@ -13,6 +13,5 @@ module.exports = merge(baseConfig,{
         contentBase: "../dist"
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin()  //启用 HMR (webpack 4)
     ]
 });

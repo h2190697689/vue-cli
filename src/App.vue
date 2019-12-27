@@ -1,17 +1,9 @@
 <template>
-    <div class="wrap">
-        <h1>{{name}}</h1>
-    </div>
+   <router-view />
 </template>
 
 <script>
 export default {
-    props: [],
-    data(){
-        return{
-            name: "hejiamin"
-        }
-    }
 }
 </script>
 
