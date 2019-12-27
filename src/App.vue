@@ -1,33 +1,28 @@
-import React, { Component, Fragment } from "react";
-import { NavLink,HashRouter,Route,Switch } from "react-router-dom";
-import Home from "./home/Home";
-import Transition from "./Transition";
-import CSSTransition from "./CSSTransition";
-import "./app.less"
+<template>
+    <div class="wrap">
+        <h1>{{name}}</h1>
+    </div>
+</template>
 
-class App extends Component{
-    constructor(props){
-        super(props);
-        this.state = {
-            name: "min"
+<script>
+export default {
+    props: [],
+    data(){
+        return{
+            name: "hejiamin"
         }
     }
-
-    render() {
-        return(
-            <Fragment>
-                <HashRouter>
-                    <Switch>
-                        <Route path="/" exact component={Home}/>
-                        <Route path="/transition" component={Transition}/>
-                        <Route path="/cssTransition" component={CSSTransition}/>
-                    </Switch>
-                </HashRouter>
-            </Fragment>
-        )
-    }
 }
+</script>
 
-export default App
+<style lang="less" scoped>
+    .wrap{
+        height: 60px;
+        background-color: gray;
+        h1{
+            color: yellow;
+        }
+    }
+</style>
 
 
